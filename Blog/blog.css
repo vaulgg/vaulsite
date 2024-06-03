@@ -1,0 +1,310 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    background-image: url('./images/backround1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.davet {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    text-decoration: none;
+  } 
+
+  .butonDiv{display: flex;align-items: center;justify-content: center;}
+  
+  .davet svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .davet span {
+    text-decoration: none;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .davet:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  .davet:hover span {
+    transform: translateX(7px);
+  }
+  
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #141414;
+    color: white;
+    box-shadow: 0 0 10px rgba(213, 213, 213, 0.581);
+    border-radius: 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-image: url('./images/backround2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.notification {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    width: 18rem;
+    height: 8rem;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    --color: #32a6ff;
+    margin: 10px;
+  }
+  
+  .notification:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #18181b;
+    z-index: 2
+  }
+  
+  .notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: var(--gradient);
+    transition: transform 300ms ease;
+    z-index: 4;
+  }
+  
+  .notification:hover:after {
+    transform: translateX(0.15rem)
+  }
+  
+  .notititle {
+    color: var(--color);
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+  }
+  
+  .notification:hover .notititle {
+    transform: translateX(0.15rem)
+  }
+  
+  .notibody {
+    color: #99999d;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+  }
+  
+  .notification:hover .notibody {
+    transform: translateX(0.25rem)
+  }
+  
+  .notiglow,
+  .notiborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle closest-side at center, white, transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  
+  .notiglow {
+    z-index: 3;
+  }
+  
+  .notiborderglow {
+    z-index: 1;
+  }
+  
+  .notification:hover .notiglow {
+    opacity: 0.1
+  }
+  
+  .notification:hover .notiborderglow {
+    opacity: 0.1
+  }
+  
+  .note {
+    color: var(--color);
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+  }
+  .notifications{
+    display: flex;justify-content: center;
+    margin: 10px;
+    
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-family: inherit;
+    gap: 10px;
+    padding-inline: 2em;
+    padding-bottom: 0.4em;
+    background-color: #171717;
+    background-color: #0a192f;
+    border-radius: 20px;
+  }
+  
+  .form-heading {
+    text-align: center;
+    margin: 2em;
+    color: #eff0fa;
+    font-size: 1.2em;
+    background-color: transparent;
+    align-self: center;
+  }
+  
+  .form-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 10px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ccd6f6;
+    padding-inline: 1em;
+  }
+  
+  .sendMessage-btn {
+    cursor: pointer;
+    margin-bottom: 3em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    outline: 1px solid #26186c;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .sendMessage-btn:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: #312f84;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  .form-card1 {
+    background-image: linear-gradient(163deg, #0a192f 0%, #0a192f 100%);
+    border-radius: 22px;
+    transition: all 0.3s;
+  }
+  
+  .form-card1:hover {
+    box-shadow: 0px 0px 30px 1px rgba(100, 177, 255, 0.3);
+  }
+  
+  .form-card2 {
+    border-radius: 0;
+    transition: all 0.2s;
+  }
+  
+  .form-card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
